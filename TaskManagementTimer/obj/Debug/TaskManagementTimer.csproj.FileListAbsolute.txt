@@ -1,1 +1,9 @@
 c:\users\tom\Documents\GitHub\TaskManagementTimer\TaskManagementTimer\bin\Debug\TaskManagementTimer.exe.config
+C:\Users\Tom\Documents\GitHub\TaskManagementTimer\TaskManagementTimer\bin\Debug\TaskManagementTimer.exe
+C:\Users\Tom\Documents\GitHub\TaskManagementTimer\TaskManagementTimer\bin\Debug\TaskManagementTimer.pdb
+C:\Users\Tom\Documents\GitHub\TaskManagementTimer\TaskManagementTimer\obj\Debug\TaskManagementTimer.csprojResolveAssemblyReference.cache
+C:\Users\Tom\Documents\GitHub\TaskManagementTimer\TaskManagementTimer\obj\Debug\TaskManagementTimer.MainForm.resources
+C:\Users\Tom\Documents\GitHub\TaskManagementTimer\TaskManagementTimer\obj\Debug\TaskManagementTimer.Properties.Resources.resources
+C:\Users\Tom\Documents\GitHub\TaskManagementTimer\TaskManagementTimer\obj\Debug\TaskManagementTimer.csproj.GenerateResource.Cache
+C:\Users\Tom\Documents\GitHub\TaskManagementTimer\TaskManagementTimer\obj\Debug\TaskManagementTimer.exe
+C:\Users\Tom\Documents\GitHub\TaskManagementTimer\TaskManagementTimer\obj\Debug\TaskManagementTimer.pdb
