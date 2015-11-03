@@ -66,32 +66,38 @@
             // Minutes
             // 
             this.Minutes.AutoSize = true;
+            this.Minutes.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Minutes.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Minutes.Location = new System.Drawing.Point(926, 12);
+            this.Minutes.Location = new System.Drawing.Point(962, 11);
             this.Minutes.Name = "Minutes";
             this.Minutes.Size = new System.Drawing.Size(36, 37);
             this.Minutes.TabIndex = 2;
             this.Minutes.Text = "0";
+            this.Minutes.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Seconds
             // 
             this.Seconds.AutoSize = true;
+            this.Seconds.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Seconds.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Seconds.Location = new System.Drawing.Point(1039, 12);
+            this.Seconds.Location = new System.Drawing.Point(1057, 12);
             this.Seconds.Name = "Seconds";
             this.Seconds.Size = new System.Drawing.Size(36, 37);
             this.Seconds.TabIndex = 3;
             this.Seconds.Text = "0";
+            this.Seconds.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.Control;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(990, 12);
+            this.label3.Location = new System.Drawing.Point(1024, 12);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(27, 37);
             this.label3.TabIndex = 4;
             this.label3.Text = ":";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // MainForm
             // 

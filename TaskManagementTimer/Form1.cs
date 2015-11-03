@@ -14,7 +14,7 @@ namespace TaskManagementTimer
 {
     public partial class MainForm : Form
     {
-        public int m = 2;
+        public int m = 25;
         public int s;
 
         public MainForm()
