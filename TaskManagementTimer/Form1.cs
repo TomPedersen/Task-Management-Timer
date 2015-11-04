@@ -14,8 +14,10 @@ namespace TaskManagementTimer
 {
     public partial class MainForm : Form
     {
-        public int m = 2;
+        public int m = 1;
         public int s;
+        public int pomoCount;
+
 
         public MainForm()
         {
@@ -36,23 +38,42 @@ namespace TaskManagementTimer
 
         void ShowMessage()
         {
-            MessageBox.Show(string.Format("{0}{1}{2}", "Time for a break! ", "Take a moment to review what you've been doing for the past 25 minutes and tick the appropriate boxes. ", "Click the 'Start Timer' button once you're ready to start working again!"));
+            MessageBox.Show(string.Format("Time for a break!{0}{1} Take 5 minutes to review the past 25 minutes and record any unplanned activities and tick the appropriate checkboxes.{2}{3} Click the Start Timer button when you're ready to start working again!", Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine));
+        }
+
+        void ShowMessageFourthBreak()
+        {
+            MessageBox.Show(string.Format("Time for a break!{0}{1} This is your fourth \"Pomodoro\" and so you should take a bit of a longer break. Take 10-15 minutes to review your day, set new tasks or just stretch your legs.{2}{3} Click the Start Timer button when you're ready to start working again!", Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine));
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            s = s - 1;
+            
 
-            if (s == -1)
+            if (s == 0)
             {
-                m = m - 1;
                 s = 59;
+                m--;
+            }
+            else
+            {
+                s--;
             }
 
-            if (m == 0 && s == 0)
+
+            if (m == 0 && s == 0 && pomoCount == 3)
             {
                 timer1.Stop();
+                m = 1;
+                ShowMessageFourthBreak();
+                pomoCount = 0;
+            }
+            else if (m == 0 && s == 0)
+            {
+                timer1.Stop();
+                m = 1;
                 ShowMessage();
+                pomoCount += 1;
             }
 
             string mm = Convert.ToString(m);
