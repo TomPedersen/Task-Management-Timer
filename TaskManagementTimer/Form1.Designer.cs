@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.startTimer = new System.Windows.Forms.Button();
             this.stopTimer = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -6987,6 +6988,7 @@
             this.Controls.Add(this.Minutes);
             this.Controls.Add(this.stopTimer);
             this.Controls.Add(this.startTimer);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.Text = "Task Management Timer";
             this.ResumeLayout(false);
