@@ -7,3 +7,12 @@ C:\Users\Tom\Documents\GitHub\TaskManagementTimer\TaskManagementTimer\obj\Debug\
 C:\Users\Tom\Documents\GitHub\TaskManagementTimer\TaskManagementTimer\obj\Debug\TaskManagementTimer.csproj.GenerateResource.Cache
 C:\Users\Tom\Documents\GitHub\TaskManagementTimer\TaskManagementTimer\obj\Debug\TaskManagementTimer.exe
 C:\Users\Tom\Documents\GitHub\TaskManagementTimer\TaskManagementTimer\obj\Debug\TaskManagementTimer.pdb
+C:\dev\Task-Management-Timer\TaskManagementTimer\bin\Debug\TaskManagementTimer.exe.config
+C:\dev\Task-Management-Timer\TaskManagementTimer\bin\Debug\TaskManagementTimer.exe
+C:\dev\Task-Management-Timer\TaskManagementTimer\bin\Debug\TaskManagementTimer.pdb
+C:\dev\Task-Management-Timer\TaskManagementTimer\obj\Debug\TaskManagementTimer.csprojResolveAssemblyReference.cache
+C:\dev\Task-Management-Timer\TaskManagementTimer\obj\Debug\TaskManagementTimer.MainForm.resources
+C:\dev\Task-Management-Timer\TaskManagementTimer\obj\Debug\TaskManagementTimer.Properties.Resources.resources
+C:\dev\Task-Management-Timer\TaskManagementTimer\obj\Debug\TaskManagementTimer.csproj.GenerateResource.Cache
+C:\dev\Task-Management-Timer\TaskManagementTimer\obj\Debug\TaskManagementTimer.exe
+C:\dev\Task-Management-Timer\TaskManagementTimer\obj\Debug\TaskManagementTimer.pdb

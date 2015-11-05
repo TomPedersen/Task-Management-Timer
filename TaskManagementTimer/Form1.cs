@@ -1,22 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
+//using System.Collections.Generic;
+//using System.ComponentModel;
+//using System.Data;
+//using System.Drawing;
+//using System.Linq;
+//using System.Text;
+//using System.Threading;
+//using System.Threading.Tasks;
 using System.Windows.Forms;
-using Timer = System.Timers.Timer;
+//using Timer = System.Timers.Timer; // You can remove the unused usings
 
 namespace TaskManagementTimer
 {
     public partial class MainForm : Form
     {
-        public int m = 1; //Will set to 25 mins for release
-        public int s;
-        public int pomoCount;
+        // Renamed these to my typical 'Russian novel length' variable naming style
+        private int _minutesRemainingUntilBreak = 1; //Will set to 25 mins for release
+        private int _secondsRemainingUntilBreak;
+        private int _numberOfPomodorosSinceLastLongBreak;
 
 
         public MainForm()
@@ -31,17 +32,17 @@ namespace TaskManagementTimer
             //    Thread popUp = new Thread((new ThreadStart(ShowMessage)));
             //    Thread.Sleep(1 * (60 * 1000)); // 1 minute
             //    popUp.Start();
-            //}
+            //} // You can remove this commented-out code
 
             timer1.Start(); //set to 100 speed during development process
         }
 
-        void ShowMessage()
+        private void ShowMessage()
         {
             MessageBox.Show(string.Format("Time for a break!{0}{1} Take 5 minutes to review the past 25 minutes and record any unplanned activities and tick the appropriate checkboxes.{2}{3} Click the Start Timer button when you're ready to start working again!", Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine));
         }
 
-        void ShowMessageFourthBreak()
+        private void ShowMessageFourthBreak()
         {
             MessageBox.Show(string.Format("Time for a break!{0}{1} This is your fourth \"Pomodoro\" and so you should take a bit of a longer break. Take 10-15 minutes to review your day, set new tasks or just stretch your legs.{2}{3} Click the Start Timer button when you're ready to start working again!", Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine));
         }
@@ -50,37 +51,36 @@ namespace TaskManagementTimer
         {
             
 
-            if (s == 0)
+            if (_secondsRemainingUntilBreak == 0)
             {
-                s = 59;
-                m--;
+                _secondsRemainingUntilBreak = 59;
+                _minutesRemainingUntilBreak--;
             }
             else
             {
-                s--;
+                _secondsRemainingUntilBreak--;
             }
 
-
-            if (m == 0 && s == 0 && pomoCount == 3)
+            // This logic can be written differently, like this. Slighly less duplication.
+            if (_minutesRemainingUntilBreak == 0 && _secondsRemainingUntilBreak == 0)
             {
                 timer1.Stop();
-                m = 1;
-                ShowMessageFourthBreak();
-                pomoCount = 0;
-            }
-            else if (m == 0 && s == 0)
-            {
-                timer1.Stop();
-                m = 1;
-                ShowMessage();
-                pomoCount += 1;
+                _minutesRemainingUntilBreak = 1;
+                if (_numberOfPomodorosSinceLastLongBreak == 3)
+                {
+                    ShowMessageFourthBreak(); 
+                    _numberOfPomodorosSinceLastLongBreak = 0;
+                }
+                else
+                {
+                    ShowMessage();
+                    _numberOfPomodorosSinceLastLongBreak += 1;
+                }
             }
 
-            string mm = Convert.ToString(m);
-            string ss = Convert.ToString(s);
-
-            Minutes.Text = mm;
-            Seconds.Text = ss;
+            // I think this will do what you want - slightly less code
+            Minutes.Text = _minutesRemainingUntilBreak.ToString();
+            Seconds.Text = _secondsRemainingUntilBreak.ToString();
         }
 
         private void stopTimer_Click(object sender, EventArgs e)
