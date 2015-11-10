@@ -14,7 +14,7 @@ namespace TaskManagementTimer
 {
     public partial class MainForm : Form
     {
-        public int m = 25; //Will set to 25 mins for release
+        public int m;
         public int s;
         public int pomoCount;
 
@@ -32,8 +32,18 @@ namespace TaskManagementTimer
             //    Thread.Sleep(1 * (60 * 1000)); // 1 minute
             //    popUp.Start();
             //}
+            if (setTimer.Text == "")
+            {
+                m = 25;
+                setTimer.Text = "25";
+            }
+            else if (setTimer.Text != "")
+            {
+                m = Convert.ToInt32(setTimer.Text);
+            }
 
             timer1.Start(); //set to 100 speed during development process
+
         }
 
         void ShowMessage()
@@ -48,7 +58,6 @@ namespace TaskManagementTimer
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            
 
             if (s == 0)
             {
