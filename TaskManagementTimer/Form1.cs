@@ -17,7 +17,18 @@ namespace TaskManagementTimer
         public int m;
         public int s;
         public int pomoCount;
+        private bool _isReset;
 
+        public bool isReset
+        {
+            get { return _isReset; }
+            set
+            {
+                _isReset = value;
+                stopTimer.Text = _isReset ? "Stop Your Timer" : "Reset Timer";
+                timer1.Stop();
+            }
+        }
 
         public MainForm()
         {
@@ -35,11 +46,12 @@ namespace TaskManagementTimer
             if (setTimer.Text == "")
             {
                 m = 25;
-                setTimer.Text = "25";
+                s = 0;
             }
             else if (setTimer.Text != "")
             {
                 m = Convert.ToInt32(setTimer.Text);
+                s = 0;
             }
 
             timer1.Start(); //set to 100 speed during development process
@@ -91,10 +103,10 @@ namespace TaskManagementTimer
             Minutes.Text = mm;
             Seconds.Text = ss;
         }
-
+        
         private void stopTimer_Click(object sender, EventArgs e)
         {
-            timer1.Stop();
+            isReset = !isReset;
         }
     }
 }
