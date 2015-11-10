@@ -652,6 +652,10 @@
             this.checkBox503 = new System.Windows.Forms.CheckBox();
             this.checkBox504 = new System.Windows.Forms.CheckBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.setTimer = new System.Windows.Forms.TextBox();
+            this.label96 = new System.Windows.Forms.Label();
+            this.label97 = new System.Windows.Forms.Label();
+            this.label98 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // startTimer
@@ -678,7 +682,6 @@
             // 
             // timer1
             // 
-            this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Minutes
@@ -686,7 +689,7 @@
             this.Minutes.AutoSize = true;
             this.Minutes.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.Minutes.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Minutes.Location = new System.Drawing.Point(1157, 12);
+            this.Minutes.Location = new System.Drawing.Point(1207, 12);
             this.Minutes.Name = "Minutes";
             this.Minutes.Size = new System.Drawing.Size(36, 37);
             this.Minutes.TabIndex = 2;
@@ -698,7 +701,7 @@
             this.Seconds.AutoSize = true;
             this.Seconds.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.Seconds.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Seconds.Location = new System.Drawing.Point(1226, 12);
+            this.Seconds.Location = new System.Drawing.Point(1280, 12);
             this.Seconds.Name = "Seconds";
             this.Seconds.Size = new System.Drawing.Size(36, 37);
             this.Seconds.TabIndex = 3;
@@ -710,7 +713,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1201, 12);
+            this.label3.Location = new System.Drawing.Point(1260, 10);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(27, 37);
             this.label3.TabIndex = 4;
@@ -902,7 +905,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(544, 12);
+            this.label8.Location = new System.Drawing.Point(855, 12);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(344, 37);
             this.label8.TabIndex = 26;
@@ -6361,12 +6364,56 @@
             this.textBox3.Size = new System.Drawing.Size(300, 26);
             this.textBox3.TabIndex = 592;
             // 
+            // setTimer
+            // 
+            this.setTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.setTimer.Location = new System.Drawing.Point(629, 20);
+            this.setTimer.Name = "setTimer";
+            this.setTimer.Size = new System.Drawing.Size(62, 26);
+            this.setTimer.TabIndex = 621;
+            // 
+            // label96
+            // 
+            this.label96.AutoSize = true;
+            this.label96.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label96.Location = new System.Drawing.Point(314, 22);
+            this.label96.Name = "label96";
+            this.label96.Size = new System.Drawing.Size(229, 24);
+            this.label96.TabIndex = 622;
+            this.label96.Text = "Set break interval timer:";
+            // 
+            // label97
+            // 
+            this.label97.AutoSize = true;
+            this.label97.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label97.Location = new System.Drawing.Point(315, 49);
+            this.label97.Name = "label97";
+            this.label97.Size = new System.Drawing.Size(492, 13);
+            this.label97.TabIndex = 623;
+            this.label97.Text = "Note: if no time specified, timer will default to 25 minutes as per the Pomodoro " +
+    "system";
+            // 
+            // label98
+            // 
+            this.label98.AutoSize = true;
+            this.label98.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label98.Location = new System.Drawing.Point(695, 22);
+            this.label98.Margin = new System.Windows.Forms.Padding(1, 0, 3, 0);
+            this.label98.Name = "label98";
+            this.label98.Size = new System.Drawing.Size(83, 24);
+            this.label98.TabIndex = 624;
+            this.label98.Text = "Minutes";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(1341, 866);
+            this.Controls.Add(this.label98);
+            this.Controls.Add(this.label97);
+            this.Controls.Add(this.label96);
+            this.Controls.Add(this.setTimer);
             this.Controls.Add(this.checkBox477);
             this.Controls.Add(this.checkBox478);
             this.Controls.Add(this.checkBox479);
@@ -7620,6 +7667,10 @@
         private System.Windows.Forms.CheckBox checkBox503;
         private System.Windows.Forms.CheckBox checkBox504;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox setTimer;
+        private System.Windows.Forms.Label label96;
+        private System.Windows.Forms.Label label97;
+        private System.Windows.Forms.Label label98;
     }
 }
 

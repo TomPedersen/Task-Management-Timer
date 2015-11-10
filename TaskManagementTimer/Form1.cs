@@ -14,7 +14,7 @@ namespace TaskManagementTimer
 {
     public partial class MainForm : Form
     {
-        public int m = 1; //Will set to 25 mins for release
+        public int m = 25; //Will set to 25 mins for release
         public int s;
         public int pomoCount;
 
