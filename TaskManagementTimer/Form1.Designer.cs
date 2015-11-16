@@ -676,7 +676,7 @@
             this.stopTimer.Name = "stopTimer";
             this.stopTimer.Size = new System.Drawing.Size(131, 36);
             this.stopTimer.TabIndex = 1;
-            this.stopTimer.Text = "Stop Your Timer";
+            this.stopTimer.Text = "Pause";
             this.stopTimer.UseVisualStyleBackColor = true;
             this.stopTimer.Click += new System.EventHandler(this.stopTimer_Click);
             // 

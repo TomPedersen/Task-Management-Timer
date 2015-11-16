@@ -25,8 +25,9 @@ namespace TaskManagementTimer
             set
             {
                 _isReset = value;
-                stopTimer.Text = _isReset ? "Stop Your Timer" : "Reset Timer";
+                stopTimer.Text = _isReset ? "Pause" : "Restart";
                 timer1.Stop();
+
             }
         }
 
