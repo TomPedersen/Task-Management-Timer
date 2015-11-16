@@ -43,6 +43,7 @@ namespace TaskManagementTimer
             //    Thread.Sleep(1 * (60 * 1000)); // 1 minute
             //    popUp.Start();
             //}
+
             if (setTimer.Text == "")
             {
                 m = 25;
@@ -60,12 +61,12 @@ namespace TaskManagementTimer
 
         void ShowMessage()
         {
-            MessageBox.Show(string.Format("Time for a break!{0}{1} Take 5 minutes to review the past 25 minutes and record any unplanned activities and tick the appropriate checkboxes.{2}{3} Click the Start Timer button when you're ready to start working again!", Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine));
+            MessageBox.Show(string.Format("Time for a break!{0}{1}Take 5 minutes to review the past interval, record any unplanned activities and tick the appropriate checkboxes.{2}{3}Click the Start Timer button when you're ready to start working again!", Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine));
         }
 
         void ShowMessageFourthBreak()
         {
-            MessageBox.Show(string.Format("Time for a break!{0}{1} This is your fourth \"Pomodoro\" and so you should take a bit of a longer break. Take 10-15 minutes to review your day, set new tasks or just stretch your legs.{2}{3} Click the Start Timer button when you're ready to start working again!", Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine));
+            MessageBox.Show(string.Format("Time for a break!{0}{1}This is your fourth \"Pomodoro\" and so you should take a bit of a longer break. Take 10-15 minutes to review your day, set new tasks or just stretch your legs.{2}{3}Click the Start Timer button when you're ready to start working again!", Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine));
         }
 
         private void timer1_Tick(object sender, EventArgs e)
